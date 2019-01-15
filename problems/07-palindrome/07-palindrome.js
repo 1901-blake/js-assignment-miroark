@@ -19,7 +19,7 @@ function isPalindrome(someStr) {
 
 let pally = "tacocat";
 let noPally = "tubacat";
-let maybePally = "taco cat"; //question is, should I include spaces in the pallindrome or not?
+let maybePally = "taco cat";
 
 console.log(isPalindrome(pally));
 console.log(isPalindrome(noPally));

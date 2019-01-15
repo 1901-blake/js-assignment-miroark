@@ -4,7 +4,7 @@
 04 - unfinished
 05 - unfinished
 06 - FINISHED
-07 - pending approval
+07 - FINISHED
 08 - FINISHED
 09 - unfinished
 10 - unfinished
