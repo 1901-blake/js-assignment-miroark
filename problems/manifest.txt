@@ -1,11 +1,11 @@
 01 - unfinished
-02 - finished
+02 - FINISHED
 03 - unfinished
 04 - unfinished
 05 - unfinished
-06 - finished
+06 - FINISHED
 07 - pending approval
-08 - finished
+08 - FINISHED
 09 - unfinished
 10 - unfinished
 11 - unfinished

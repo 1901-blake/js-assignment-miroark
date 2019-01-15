@@ -3,6 +3,9 @@ Define function: isEven(someNum)
 Return true if even, false if odd.
 Do not use % operator. */
 function isEven(someNum) {
-  return !(someNum%2);
+  while (someNum > 1){
+    someNum = someNum - 2;
+  }
+  return !someNum;
 }
 console.log(`5 is even: ${isEven(5)}, 6 is even: ${isEven(6)}`);
