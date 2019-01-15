@@ -58,7 +58,7 @@ function substring(someStr, startIndex, endIndex) {
 
   if (thereAreNoErrors(someStr, startIndex, endIndex)){
     for (let i = startIndex; i < endIndex; i++){
-      result = result + i + someStr[i];
+      result = result + someStr[i];
     }
   }
 
@@ -70,5 +70,6 @@ console.log(`
   Input: ("Hello", 0, 3)
   Output: ${substring("Hello", 0, 3)}
 
-  Input: ("Potato", 3, 5)
-  Output: `)
+  Input: ("Potato", 3, 6)
+  Output: ${substring("Potato", 3, 6)}`
+);
