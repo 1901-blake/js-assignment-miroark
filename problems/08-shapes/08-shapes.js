@@ -14,31 +14,47 @@ $
 $$
 $$$
 Example for printShape("Diamond", 5, "*");
-  *
- ***
-*****
- ***
-  *
+   *
+  ***
+ *****
+*******
+ *****
+  ***
+   *
 */
 function isEven(someNum) {
   return !(someNum%2);
 }
 
+//-----------------------------------------------------------------
+
 function printTriangle(height, character){
   for (let i = 0; i < height; i++){
     console.log(character.repeat(i+1));
   }
-}
+}// end of printTriangle
 
 function printSquare(height, character){
   for (let i = 0; i< height; i++){
     console.log(character.repeat(height));
   }
-}
+}//end of printSquare
 
 function printDiamond(height, character){
-  console.log("Diamond function invoked.");
-}
+
+  for (i = 0; i < height; i++){
+    console.log(`${" ".repeat((height-(i+1))/2)}${character.repeat(i+1)}`);
+    i++; //weird, I know but the for loop won't let me add two at a time, so I have to increment here.
+  }//top
+
+  for (i = height-3; i > -1; i--){
+    console.log(`${" ".repeat((height-(i+1))/2)}${character.repeat(i+1)}`);
+    i--; //weird, I know but the for loop won't let me add two at a time, so I have to decrement here.
+  }//bottom
+
+}//end of printDiamond
+
+//-------------------------------------------------------------------------------------------
 
 function printShape(shape, height, character) {
   if (isEven(height)) {
@@ -70,7 +86,13 @@ console.log(`
 printShape("triangle", 3, '@');
 console.log(`
   `);
-printShape("square", 3, '@');
+printShape("square", 3, '.');
 console.log(`
   `);
-printShape("diamond", 3, '@');
+printShape("diamond", 5, ',');
+console.log(`
+  `);
+printShape("diamond", 11, '/');
+console.log(`
+  `);
+printShape("triangle", 5, 'r');
