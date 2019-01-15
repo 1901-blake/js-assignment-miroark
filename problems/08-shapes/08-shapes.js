@@ -42,14 +42,12 @@ function printSquare(height, character){
 
 function printDiamond(height, character){
 
-  for (i = 0; i < height; i++){
+  for (i = 0; i < height; i+=2){
     console.log(`${" ".repeat((height-(i+1))/2)}${character.repeat(i+1)}`);
-    i++; //weird, I know but the for loop won't let me add two at a time, so I have to increment here.
   }//top
 
-  for (i = height-3; i > -1; i--){
+  for (i = height-3; i > -1; i-=2){
     console.log(`${" ".repeat((height-(i+1))/2)}${character.repeat(i+1)}`);
-    i--; //weird, I know but the for loop won't let me add two at a time, so I have to decrement here.
   }//bottom
 
 }//end of printDiamond
