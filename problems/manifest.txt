@@ -3,9 +3,9 @@
 03 - unfinished
 04 - unfinished
 05 - unfinished
-06 - unfinished
+06 - finished
 07 - in progress
-08 - unfinished
+08 - in progress
 09 - unfinished
 10 - unfinished
 11 - unfinished

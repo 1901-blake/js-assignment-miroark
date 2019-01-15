@@ -18,8 +18,59 @@ Example for printShape("Diamond", 5, "*");
  ***
 *****
  ***
-  * 
+  *
 */
-function printShape(shape, height, character) {
-  
+function isEven(someNum) {
+  return !(someNum%2);
 }
+
+function printTriangle(height, character){
+  for (let i = 0; i < height; i++){
+    console.log(character.repeat(i+1));
+  }
+}
+
+function printSquare(height, character){
+  for (let i = 0; i< height; i++){
+    console.log(character.repeat(height));
+  }
+}
+
+function printDiamond(height, character){
+  console.log("Diamond function invoked.");
+}
+
+function printShape(shape, height, character) {
+  if (isEven(height)) {
+    console.log(`Error: height is expected to be odd. ${height} is even though`)
+  }
+  else {
+    switch (shape) {
+      case "triangle":
+        printTriangle(height, character);
+        break;
+        case "square":
+          printSquare(height, character);
+          break;
+        case "diamond":
+          printDiamond(height, character);
+          break;
+      default:
+      console.log("Error: Invalid shape entered. Pleas make sure to use lower case is the function calls.");
+    }
+  }
+}
+
+printShape("circle", 5, '&');
+printShape("triangle", 2, '^');
+console.log(`
+
+
+  `);
+printShape("triangle", 3, '@');
+console.log(`
+  `);
+printShape("square", 3, '@');
+console.log(`
+  `);
+printShape("diamond", 3, '@');
