@@ -1,6 +1,27 @@
 /* 9. Object Properties
 Define function objectProperties(someObj)
 Print every property and it's value. */
+
+function arrayElements (someArray, indents = 0) {
+  someArray.forEach((element) => {
+    if (element.constructor === Object){
+      console.log(`${" ".repeat(indents)}{`);
+      objectProperties(element, indents + 1);
+      console.log(`${" ".repeat(indents)}}
+      `)
+    }//Object Handler. COMPLETE
+
+    else if (element.constructor === Array) {
+      console.log(`${" ".repeat(indents)}Array in an array.`);
+    }//Array Handler
+
+    else {
+      console.log(`${" ".repeat(indents)}${element}`);
+    }//Primitive Handler. COMPLETE
+
+  });
+}//end of arrayElements. IN PROGRESS
+
 function objectProperties(someObj, indents = 0) {
 
   for (item in someObj){
@@ -8,25 +29,20 @@ function objectProperties(someObj, indents = 0) {
       //Recurseively call objectProperties. Who knows how many objects are nested?
       console.log(`${" ".repeat(indents)}Key: ${item}`);
       console.log(`${" ".repeat(indents)}Value:{`);
-      objectProperties(someObj[item], indents+1);
-      console.log(`${" ".repeat(indents)}}`);
+      objectProperties(someObj[item], indents + 1);
+      console.log(`${" ".repeat(indents)}}
+      `);
     }//end of object handling. COMPLETE
 
     else if (someObj[item].constructor === Array) {
-      //Iterate through the array, and display their values.
       console.log(`${" ".repeat(indents)}Key: ${item}`);
+      console.log(`${" ".repeat(indents)}Value: [`);
 
-      //assemble string with contents in the array.
-      let arrayContents = '[';
-      someObj[item].forEach(function(element){
-        arrayContents += element + ', ';
-      });
-      arrayContents = arrayContents.substring(0, arrayContents.length - 2);
-      arrayContents += ']';
+      arrayElements(someObj[item], indents + 1);
 
-      console.log(`${" ".repeat(indents)}Value: ${arrayContents}
-        `);
-    }//end of array handling. Needs to be able to hand more arrays, or more objects.
+      console.log(`${" ".repeat(indents)}]
+      `);
+    }//end of array handling. COMPLETE
 
     else {
       console.log(`${" ".repeat(indents)}Key: ${item}`);
@@ -34,7 +50,7 @@ function objectProperties(someObj, indents = 0) {
         `);
     }//end of primitives handling. COMPLETE
   }//end of for (x in y)
-}//end of objectProperties
+}//end of objectProperties. COMPLETE
 
 let testObj = {
   category : 'Fruit',
