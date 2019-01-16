@@ -3,11 +3,12 @@ Define function: fib(n)
 Return the nth number in the fibonacci sequence. */
 function fib(n) {
   //Dynamically programmed to avoid a large stack incurred by recursion.
+  // O(n)
   let f = [0, 1];
 
   for (let i = 2; i <= n; i++){
     f.push(f[0] + f[1]);
-    f.shift();
+    f.shift(); //save some memory.
   }
 
   return f[1];
