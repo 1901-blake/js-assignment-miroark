@@ -25,7 +25,7 @@ function objectProperties(someObj) {
 
       console.log(`Value: ${arrayContents}
         `);
-    }//end of array handling
+    }//end of array handling. Needs to be able to hand more arrays, or more objects.
 
     else {
       console.log(`Key: ${item}`);
