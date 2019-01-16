@@ -12,15 +12,18 @@ function arrayElements (someArray, indents = 0) {
     }//Object Handler. COMPLETE
 
     else if (element.constructor === Array) {
-      console.log(`${" ".repeat(indents)}Array in an array.`);
-    }//Array Handler
+      console.log(`${" ".repeat(indents)}[`);
+      arrayElements(element, indents + 1);
+      console.log(`${" ".repeat(indents)}]
+      `);
+    }//Array Handler. COMPLETE
 
     else {
       console.log(`${" ".repeat(indents)}${element}`);
     }//Primitive Handler. COMPLETE
 
   });
-}//end of arrayElements. IN PROGRESS
+}//end of arrayElements. COMPLETE
 
 function objectProperties(someObj, indents = 0) {
 
@@ -47,7 +50,7 @@ function objectProperties(someObj, indents = 0) {
     else {
       console.log(`${" ".repeat(indents)}Key: ${item}`);
       console.log(`${" ".repeat(indents)}Value: ${someObj[item]}
-        `);
+      `);
     }//end of primitives handling. COMPLETE
   }//end of for (x in y)
 }//end of objectProperties. COMPLETE
